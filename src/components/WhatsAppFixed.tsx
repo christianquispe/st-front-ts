@@ -1,10 +1,13 @@
+import { WhatsApp } from "../icons";
+
 const WhatsAppFixed: React.FC = () => {
   return (
     <>
-      <div>WhatsApp</div>
+      <div>
+        <WhatsApp style={{ color: "green" }} width={50} height={50} />
+      </div>
       <style jsx>{`
         div {
-          background-color: var(--primary-bg-color);
           position: fixed;
           bottom: 1rem;
           right: 1rem;
