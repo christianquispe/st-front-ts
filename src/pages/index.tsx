@@ -1,14 +1,16 @@
-import { Nav, WhatsAppFixed } from "../components"
-import { ProductSection } from "../widgets"
+import { Nav, WhatsAppFixed } from "../components";
+import { ProductSection } from "../widgets";
 
 const Home = () => {
   return (
-    <header>
-      <Nav />
-      <WhatsAppFixed />
+    <>
+      <header>
+        <Nav />
+      </header>
       <ProductSection />
-    </header>
-  )
-}
+      <WhatsAppFixed />
+    </>
+  );
+};
 
-export default Home
+export default Home;
