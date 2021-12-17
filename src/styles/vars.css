@@ -1,0 +1,12 @@
+:root {
+  --primary-bg-color: #717171;
+  --second-bg-color: #414141;
+
+  /* --second-bg-color: #414171; */
+
+  --primary-border-color: #ababab;
+  --second-border-color: #676767;
+  --second-border-color-05: rgba(103, 103, 103, 0.5);
+
+  --primary-article-title-size: 1.05rem;
+}

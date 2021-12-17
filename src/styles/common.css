@@ -1,0 +1,3 @@
+.text-medium {
+  font-size: clamp(16px, 2vw, 20px);
+}

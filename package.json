@@ -1,0 +1,22 @@
+{
+  "name": "st-front-ts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:christianquispe/st-front-ts.git",
+  "author": "christianquispe <christianquispecamasca@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "next": "^12.0.7",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "start": "next start",
+    "build": "next build"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.37",
+    "typescript": "^4.5.3"
+  }
+}
