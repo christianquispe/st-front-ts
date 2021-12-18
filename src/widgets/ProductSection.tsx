@@ -1,5 +1,74 @@
 import { PictureCard } from "../components";
 
+// HARD DATA
+
+const data = [
+  {
+    id: "12dkfakd345",
+    img: "afdafd",
+    title: "Un cuadro bacán",
+    description: "Cuadro perfecto para ambientes claros",
+    price: 65,
+    simbol: "S/",
+  },
+  {
+    id: "1234sdfaf5",
+    img: "afdafd",
+    title: "Un cuadro bacán",
+    description: "Cuadro perfecto para ambientes claros",
+    price: 50,
+    simbol: "S/",
+  },
+  {
+    id: "12adkafj345",
+    img: "afdafd",
+    title: "Un cuadro bacán",
+    description: "Cuadro perfecto para ambientes claros",
+    price: 75,
+    simbol: "S/",
+  },
+  {
+    id: "12345dskdjg",
+    img: "afdafd",
+    title: "Un cuadro bacán",
+    description: "Cuadro perfecto para ambientes claros",
+    price: 45,
+    simbol: "S/",
+  },
+  {
+    id: "12345askk",
+    img: "afdafd",
+    title: "Un cuadro bacán",
+    description: "Cuadro perfecto para ambientes claros",
+    price: 65,
+    simbol: "S/",
+  },
+  {
+    id: "12345orie",
+    img: "afdafd",
+    title: "Un cuadro bacán",
+    description: "Cuadro perfecto para ambientes claros",
+    price: 50,
+    simbol: "S/",
+  },
+  {
+    id: "12345dah",
+    img: "afdafd",
+    title: "Un cuadro bacán",
+    description: "Cuadro perfecto para ambientes claros",
+    price: 75,
+    simbol: "S/",
+  },
+  {
+    id: "12345fk",
+    img: "afdafd",
+    title: "Un cuadro bacán",
+    description: "Cuadro perfecto para ambientes claros",
+    price: 45,
+    simbol: "S/",
+  },
+];
+
 const ProductSection: React.FC = () => {
   return (
     <>
@@ -10,13 +79,9 @@ const ProductSection: React.FC = () => {
             <input type="text" placeholder="Buscar..." />
           </div>
           <div className="picture-list">
-            <PictureCard id="12345" img="dfd" title="Un cuadro bacán" />
-            <PictureCard id="12345" img="dfd" title="Un cuadro bacán" />
-            <PictureCard id="12345" img="dfd" title="Un cuadro bacán" />
-            <PictureCard id="12345" img="dfd" title="Un cuadro bacán" />
-            <PictureCard id="12345" img="dfd" title="Un cuadro bacán" />
-            <PictureCard id="12345" img="dfd" title="Un cuadro bacán" />
-            <PictureCard id="12345" img="dfd" title="Un cuadro bacán" />
+            {data.map((pict) => (
+              <PictureCard key={pict.id} href={`products/details/${pict.id}`} {...pict} />
+            ))}
           </div>
         </div>
       </section>
