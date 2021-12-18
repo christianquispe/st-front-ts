@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Button } from ".";
 
 interface CardBase {
@@ -6,15 +7,25 @@ interface CardBase {
   id: string;
 }
 
-type PictureCardProps = CardBase;
+type PictureCardProps = CardBase & {
+  price: number;
+  simbol: string;
+  href: string;
+};
 
-const PictureCard: React.FC<PictureCardProps> = ({ title, img }) => {
+const PictureCard: React.FC<PictureCardProps> = (props) => {
+  const { title, price, simbol, href } = props;
   return (
     <>
       <article>
         {/* <img src={img} alt={title} /> */}
-        <div className="img"></div>
-        <h2>{title}</h2>
+        <Link href={href}>
+          <a>
+            <div className="img"></div>
+            <h2>{title}</h2>
+          </a>
+        </Link>
+        <p className="text-medium price">{`${simbol} ${price}.00`}</p>
         <Button>Add to car</Button>
       </article>
       <style jsx>{`
@@ -30,13 +41,30 @@ const PictureCard: React.FC<PictureCardProps> = ({ title, img }) => {
           flex-grow: 1;
         }
 
+        h2,
+        p {
+          margin: 0;
+          margin-bottom: 0.5rem;
+        }
+
         h2 {
-          margin: 0.625rem 0;
+          margin-top: 1.25rem;
           font-size: var(--primary-article-title-size);
           font-weight: 600;
           text-transform: uppercase;
-          color: var(--primary-bg-color);
+          color: var(--color-black);
+          transition: 0.3s linear all;
+          cursor: pointer;
         }
+
+        h2:hover {
+          color: var(--color-primary);
+        }
+
+        a {
+          text-decoration: none;
+        }
+
       `}</style>
     </>
   );
