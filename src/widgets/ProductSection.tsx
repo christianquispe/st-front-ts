@@ -80,7 +80,7 @@ const ProductSection: React.FC = () => {
           </div>
           <div className="picture-list">
             {data.map((pict) => (
-              <PictureCard key={pict.id} href={`products/details/${pict.id}`} {...pict} />
+              <PictureCard key={pict.id} href={`/products/details/${pict.id}`} {...pict} />
             ))}
           </div>
         </div>
