@@ -33,7 +33,7 @@ label {
 .title {
   font-size: 2.5rem;
   font-weight: bold;
-  color: var(--primary-bg-color);
+  color: var(--color-black);
   text-transform: capitalize;
 }
 
@@ -49,11 +49,14 @@ label {
 }
 
 .navigation-link {
+  text-transform: uppercase;
   display: block;
+  font-size: .875rem;
+  letter-spacing: 1;
   color: var(--color-black);
   text-decoration: none;
-  font-weight: 700;
-  padding: 10px 15px;
+  font-weight: 500;
+  padding: 5px 10px;
   border-radius: 0.2rem;
   transition: linear 0.3s all;
 }

@@ -1,9 +1,10 @@
 :root {
   --color-primary: #024873;
+  --color-primary-variant: #03588C;
   --color-black: #0D0D0D;
 
   --primary-bg-color: var(--color-primary);
-  --second-bg-color: #03588C;
+  --second-bg-color: var(--color-primary-variant);
 
   /* --second-bg-color: #414171; */
 
@@ -11,5 +12,5 @@
   --second-border-color: #676767;
   --second-border-color-05: rgba(103, 103, 103, 0.5);
 
-  --primary-article-title-size: 1.05rem;
+  --primary-article-title-size: .875rem;
 }
