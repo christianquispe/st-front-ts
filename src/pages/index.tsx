@@ -1,5 +1,5 @@
 import { Nav, WhatsAppFixed } from "../components";
-import { ProductSection } from "../widgets";
+import { Footer, ProductSection } from "../widgets";
 
 const Home = () => {
   return (
@@ -9,6 +9,7 @@ const Home = () => {
       </header>
       <ProductSection />
       <WhatsAppFixed />
+      <Footer />
     </>
   );
 };

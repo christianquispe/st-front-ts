@@ -57,14 +57,14 @@ const PictureCard: React.FC<PictureCardProps> = (props) => {
           cursor: pointer;
         }
 
-        h2:hover {
-          color: var(--color-primary);
-        }
-
         a {
           text-decoration: none;
         }
 
+        .price {
+          color: var(--color-primary);
+          font-weight: 500;
+        }
       `}</style>
     </>
   );
