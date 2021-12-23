@@ -1,8 +1,9 @@
 import { PictureCard } from "../components";
+import ProductList from "./ProductListss";
 
 // HARD DATA
 
-const data = [
+const dataa2 = [
   {
     id: "12dkfakd345",
     img: "afdafd",
@@ -69,7 +70,13 @@ const data = [
   },
 ];
 
-const ProductSection: React.FC = () => {
+interface ProductSectionProps {
+  productsGraph: any;
+}
+
+const ProductSection: React.FC<ProductSectionProps> = ({ productsGraph }) => {
+  const data = productsGraph?.data?.allPictures;
+
   return (
     <>
       <section>
@@ -78,15 +85,7 @@ const ProductSection: React.FC = () => {
             <span className="text-medium">Mas de 50 cuadros</span>
             <input type="text" placeholder="Buscar..." />
           </div>
-          <div className="picture-list">
-            {data.map((pict) => (
-              <PictureCard
-                key={pict.id}
-                href={`/products/details/${pict.id}`}
-                {...pict}
-              />
-            ))}
-          </div>
+          <ProductList productsData={data} />
         </div>
       </section>
       <style jsx>{`
@@ -107,12 +106,6 @@ const ProductSection: React.FC = () => {
         }
         input:focus {
           outline: 1px solid var(--second-border-color-05);
-        }
-        .picture-list {
-          display: flex;
-          justify-content: space-evenly;
-          flex-wrap: wrap;
-          gap: 20px;
         }
       `}</style>
     </>
