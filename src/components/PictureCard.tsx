@@ -11,10 +11,11 @@ type PictureCardProps = CardBase & {
   price: number
   simbol: string
   href: string
+  addToCart: () => void
 }
 
 const PictureCard: React.FC<PictureCardProps> = (props) => {
-  const { title, price, simbol, href, img } = props
+  const { title, price, simbol, href, img, addToCart } = props
   return (
     <>
       <article>
@@ -25,7 +26,7 @@ const PictureCard: React.FC<PictureCardProps> = (props) => {
           </a>
         </Link>
         <p className="text-medium price">{`${simbol} ${price}.00`}</p>
-        <Button>Add to cart</Button>
+        <Button onClick={addToCart}>Add to cart</Button>
       </article>
       <style jsx>{`
         article {

@@ -1,6 +1,6 @@
-import { useQuery } from "@apollo/client"
+import { useMutation, useQuery } from "@apollo/client"
 import { PictureCard } from "../components"
-import { ALL_PICTURE_QUERY } from "../graphql/resolvers"
+import { ALL_PICTURE_QUERY, ADD_TO_CART } from "../graphql/resolvers"
 
 interface ProductListProps {
   productsData: any
@@ -8,12 +8,9 @@ interface ProductListProps {
 
 const ProductList: React.FC<ProductListProps> = (props) => {
   const { productsData } = props
-  // const { data } = useQuery(ALL_PICTURE_QUERY, {
-  //   variables: {},
-  //   notifyOnNetworkStatusChange: true,
-  // });
-
   const data = productsData?.pictures
+
+  const [addToCart] = useMutation(ADD_TO_CART)
 
   return (
     <>
@@ -26,6 +23,17 @@ const ProductList: React.FC<ProductListProps> = (props) => {
             price={pict?.price}
             simbol={pict?.simbol}
             img={pict?.img}
+            addToCart={() => {
+              addToCart({
+                variables: {
+                  input: {
+                    type: "picture",
+                    productId: pict?._id,
+                  },
+                },
+              })
+              console.log("Added!")
+            }}
             {...pict}
           />
         ))}

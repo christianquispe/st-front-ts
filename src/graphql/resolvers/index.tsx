@@ -35,3 +35,25 @@ export const GET_PICTURE = gql`
     }
   }
 `
+
+export const ADD_TO_CART = gql`
+  mutation addToCart($input: InputAddToCart!) {
+    addToCart(input: $input) {
+      type
+      productSummary {
+        _id
+        name
+        description
+        price
+        img
+        simbol
+        createdAt
+        updatedAt
+      }
+      quantity
+      createdAt
+      updatedAt
+      productId
+    }
+  }
+`
