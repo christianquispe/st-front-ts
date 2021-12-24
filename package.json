@@ -17,11 +17,18 @@
   "scripts": {
     "dev": "next dev",
     "start": "next start",
-    "build": "next build"
+    "build": "next build",
+    "prettier:fix": "prettier -w 'src/**'",
+    "lint": "next lint"
   },
   "devDependencies": {
+    "prettier": "^2.5.1",
     "@types/lodash": "^4.14.178",
     "@types/react": "^17.0.37",
+    "eslint": "8.5.0",
+    "eslint-config-next": "12.0.7",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-react": "^7.28.0",
     "typescript": "^4.5.3"
   }
 }
