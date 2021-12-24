@@ -28,6 +28,6 @@ const Footer: React.FC = () => {
         }
       `}</style>
     </>
-  );
-};
-export default Footer;
+  )
+}
+export default Footer

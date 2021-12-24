@@ -1,12 +1,12 @@
-import { HTMLAttributes } from "react";
+import { HTMLAttributes } from "react"
 
 interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
-  type?: "main" | "second";
-  htmlType?: "submit" | "reset" | "button" | undefined;
+  type?: "main" | "second"
+  htmlType?: "submit" | "reset" | "button" | undefined
 }
 
 const Button: React.FC<ButtonProps> = (props) => {
-  const { type = "primary", htmlType, children, ...restProps } = props;
+  const { type = "primary", htmlType, children, ...restProps } = props
 
   return (
     <>
@@ -31,6 +31,6 @@ const Button: React.FC<ButtonProps> = (props) => {
         }
       `}</style>
     </>
-  );
-};
-export default Button;
+  )
+}
+export default Button

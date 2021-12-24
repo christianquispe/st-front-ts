@@ -1,4 +1,4 @@
-import ProductSection from "./ProductSection";
-import Footer from "./Footer";
+import ProductSection from "./ProductSection"
+import Footer from "./Footer"
 
-export { ProductSection, Footer };
+export { ProductSection, Footer }

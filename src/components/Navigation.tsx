@@ -1,22 +1,20 @@
-import Link from "next/link";
+import Link from "next/link"
 
 interface NavLinkProps {
-  href?: string;
+  href?: string
 }
 
 const NavLink: React.FC<NavLinkProps> = ({ children, href }) => (
   <li className="navigation-item">
     {href ? (
       <Link href={href}>
-        <a className="navigation-link">
-          {children}
-        </a>
+        <a className="navigation-link">{children}</a>
       </Link>
     ) : (
       children
     )}
   </li>
-);
+)
 
 const Navigation: React.FC = () => {
   return (
@@ -31,7 +29,7 @@ const Navigation: React.FC = () => {
         </ul>
       </nav>
     </div>
-  );
-};
+  )
+}
 
-export default Navigation;
+export default Navigation

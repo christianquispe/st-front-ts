@@ -51,7 +51,7 @@ label {
 .navigation-link {
   text-transform: uppercase;
   display: block;
-  font-size: .875rem;
+  font-size: 0.875rem;
   letter-spacing: 1;
   color: var(--color-black);
   text-decoration: none;

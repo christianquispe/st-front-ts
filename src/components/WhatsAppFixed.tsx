@@ -1,4 +1,4 @@
-import { WhatsApp } from "../icons";
+import { WhatsApp } from "../icons"
 
 const WhatsAppFixed: React.FC = () => {
   return (
@@ -14,6 +14,6 @@ const WhatsAppFixed: React.FC = () => {
         }
       `}</style>
     </>
-  );
-};
-export default WhatsAppFixed;
+  )
+}
+export default WhatsAppFixed

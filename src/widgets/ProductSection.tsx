@@ -1,5 +1,5 @@
-import { PictureCard } from "../components";
-import ProductList from "./ProductListss";
+import { PictureCard } from "../components"
+import ProductList from "./ProductListss"
 
 // HARD DATA
 
@@ -68,14 +68,14 @@ const dataa2 = [
     price: 45,
     simbol: "S/",
   },
-];
+]
 
 interface ProductSectionProps {
-  productsGraph: any;
+  productsGraph: any
 }
 
 const ProductSection: React.FC<ProductSectionProps> = ({ productsGraph }) => {
-  const data = productsGraph?.data?.allPictures;
+  const data = productsGraph?.data?.allPictures
 
   return (
     <>
@@ -109,6 +109,6 @@ const ProductSection: React.FC<ProductSectionProps> = ({ productsGraph }) => {
         }
       `}</style>
     </>
-  );
-};
-export default ProductSection;
+  )
+}
+export default ProductSection

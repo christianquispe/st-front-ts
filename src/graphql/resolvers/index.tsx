@@ -1,4 +1,4 @@
-import { gql } from "@apollo/client";
+import { gql } from "@apollo/client"
 
 export const ALL_PICTURE_QUERY = gql`
   query allPictures($paginated: Paginated, $filter: FilterPicture) {
@@ -22,7 +22,7 @@ export const ALL_PICTURE_QUERY = gql`
       }
     }
   }
-`;
+`
 
 export const GET_PICTURE = gql`
   query getPicture($id: ID!) {
@@ -33,4 +33,4 @@ export const GET_PICTURE = gql`
       status
     }
   }
-`;
+`

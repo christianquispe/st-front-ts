@@ -1,20 +1,20 @@
-import Link from "next/link";
-import { Button } from ".";
+import Link from "next/link"
+import { Button } from "."
 
 interface CardBase {
-  title: string;
-  img: string;
-  id: string;
+  title: string
+  img: string
+  id: string
 }
 
 type PictureCardProps = CardBase & {
-  price: number;
-  simbol: string;
-  href: string;
-};
+  price: number
+  simbol: string
+  href: string
+}
 
 const PictureCard: React.FC<PictureCardProps> = (props) => {
-  const { title, price, simbol, href } = props;
+  const { title, price, simbol, href } = props
   return (
     <>
       <article>
@@ -67,6 +67,6 @@ const PictureCard: React.FC<PictureCardProps> = (props) => {
         }
       `}</style>
     </>
-  );
-};
-export default PictureCard;
+  )
+}
+export default PictureCard
