@@ -25,6 +25,7 @@ const ProductList: React.FC<ProductListProps> = (props) => {
             title={pict?.name}
             price={pict?.price}
             simbol={pict?.simbol}
+            img={pict?.img}
             {...pict}
           />
         ))}

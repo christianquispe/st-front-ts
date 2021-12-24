@@ -36,6 +36,7 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
   const res = await apolloClient.query({
     query: GET_PICTURE,
     variables: { id: params?.id },
+    "fetch-policy": "no-cache",
   })
 
   return addApolloState(apolloClient, {

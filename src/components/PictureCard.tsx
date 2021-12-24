@@ -14,19 +14,18 @@ type PictureCardProps = CardBase & {
 }
 
 const PictureCard: React.FC<PictureCardProps> = (props) => {
-  const { title, price, simbol, href } = props
+  const { title, price, simbol, href, img } = props
   return (
     <>
       <article>
-        {/* <img src={img} alt={title} /> */}
         <Link href={href}>
           <a>
-            <div className="img"></div>
+            <img className="img" src={img} alt={title} />
             <h2>{title}</h2>
           </a>
         </Link>
         <p className="text-medium price">{`${simbol} ${price}.00`}</p>
-        <Button>Add to car</Button>
+        <Button>Add to cart</Button>
       </article>
       <style jsx>{`
         article {

@@ -17,6 +17,7 @@ export const ALL_PICTURE_QUERY = gql`
         status
         price
         simbol
+        img
         createdAt
         updatedAt
       }
